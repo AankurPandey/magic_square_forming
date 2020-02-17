@@ -15,6 +15,7 @@
 # 	############################################################code for creating the square
 # 	if choice==1:
 # 		row=int(input("enter the no rows\n"))
+#		sss=(row((row**2)+1)//2)
 # 		mainSquare=[]
 # 		i=0
 # 		while i<row:
@@ -54,7 +55,7 @@
 # 		i=0
 # 		k=1
 # 		for i in range(row-1):
-# 			if rowSum[i]==rowSum[i+1] and colSum[i]==colSum[i+1] and colSum[i]==rowSum[i] and diog1==diog2:
+# 			if rowSum[i]==rowSum[i+1]==sss and colSum[i]==colSum[i+1]==sss and colSum[i]==rowSum[i]==sss and diog1==diog2==sss:
 # 				k+=1
 # 		if k==row:
 # 			print("its a magic square") 
