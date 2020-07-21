@@ -114,9 +114,8 @@ sum = [0, 0, 0, 0]
 for row_value in range(len(main_list)):
     row_sum = 0
     col_sum = 0
-    row_no = len(main_list)
+    row_no-= 1
     for col_value in range(len(main_list)):
-        row_no-= 1
         row_sum+= main_list[row_value][col_value]
         col_sum+= main_list[col_value][row_value]
     sum[2]+= main_list[row_value][row_value]
