@@ -101,7 +101,36 @@
 # 	else:
 # 		print("invalid choice")
 # 		break
+main_list = []
+row_no = int(input('enter number of rows\n'))
+for row in range(row_no):
+	inp = list(map(int, input('input for row '+str(row+1)+'\n').strip().split()))
+	main_list.append(inp)
+	del inp
 
+sum_should_be = row_no*((row_no**2)+1)//2
+
+sum = [0, 0, 0, 0] 
+for row_value in range(len(main_list)):
+    row_sum = 0
+    col_sum = 0
+    row_no = len(main_list)
+    for col_value in range(len(main_list)):
+        row_no-= 1
+        row_sum+= main_list[row_value][col_value]
+        col_sum+= main_list[col_value][row_value]
+    sum[2]+= main_list[row_value][row_value]
+    sum[3]+= main_list[row_value][row_no]
+
+    if row_sum == col_sum == row_sum == sum_should_be:
+        sum[0] = row_sum
+        sum[1] = col_sum
+    else:
+        print('not a magic square')
+        break
+
+if row_sum == sum[2] == sum[3] == sum_should_be:
+    print('is a magic square')
 
 
 
