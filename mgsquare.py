@@ -121,14 +121,14 @@ for row_value in range(len(main_list)):
     sum[2]+= main_list[row_value][row_value]
     sum[3]+= main_list[row_value][row_no]
 
-    if row_sum == col_sum == row_sum == sum_should_be:
+    if col_sum == row_sum == sum_should_be:
         sum[0] = row_sum
         sum[1] = col_sum
     else:
         print('not a magic square')
         break
 
-if row_sum == sum[2] == sum[3] == sum_should_be:
+if sum[2] == sum[3] == sum_should_be:
     print('is a magic square')
 
 
